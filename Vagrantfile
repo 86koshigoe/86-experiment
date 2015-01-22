@@ -77,23 +77,28 @@ Vagrant.configure(2) do |config|
     # chef.nodes_path = "nodes"
 
     # Add a recipe
-    # chef.add_recipe "yum-remi"
+    chef.add_recipe "yum-remi"
     chef.add_recipe "git"
-    chef.add_recipe "nginx"
     chef.add_recipe "mysql::server"
     chef.add_recipe "mysql::client"
     chef.add_recipe "php"
-    # chef.add_recipe "php5-fpm::install"
+    chef.add_recipe "php5-fpm::install"
+    chef.add_recipe "nginx"
 
     # # Or maybe a role
     # chef.add_role "web"
 
     chef.json = {
-      "php" => {
-        "install_method" => "source",
-        "version" => "5.5.20",
-        "checksum" => "7454e4f2dba3b08b2c88bb178e7bf704ed100f3d7ab6b83ea5046a6e4acb7295",
-      }
+      "remi" => {
+        "php55" => {
+          "enabled" => true
+        }
+      },
+    #   "php" => {
+    #     "install_method" => "source",
+    #     "version" => "5.5.20",
+    #     "checksum" => "7454e4f2dba3b08b2c88bb178e7bf704ed100f3d7ab6b83ea5046a6e4acb7295",
+    #   }
     }
   end
 end

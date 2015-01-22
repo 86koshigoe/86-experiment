@@ -11,5 +11,6 @@ Vagrant と Berkshelf と Chef Zero を使った開発環境構築の試み。
       - checksum を指定しないと一致しなくて失敗した
       - SHA256 のチェックサムで指定する必要がある模様(詳細未確認)
 - TODO: php fpm
+  - コミュニティブックのレシピを使うとパッケージインストールになり、ソースで入れたPHPのAPIバージョンと一致せずNOTICEが出てしまう
 - TODO: MySQL の詳細設定
 - TODO: Nginx の詳細設定
