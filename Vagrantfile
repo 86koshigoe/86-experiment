@@ -82,7 +82,7 @@ Vagrant.configure(2) do |config|
     chef.add_recipe "mysql::server"
     chef.add_recipe "mysql::client"
     chef.add_recipe "php"
-    chef.add_recipe "php5-fpm::install"
+    chef.add_recipe "php-fpm"
     chef.add_recipe "nginx"
 
     # # Or maybe a role
@@ -93,6 +93,11 @@ Vagrant.configure(2) do |config|
         "php55" => {
           "enabled" => true
         }
+      },
+      "php-fpm" => {
+        "skip_repository_install" => true,
+        "user" => "nginx",
+        "group" => "nginx",
       },
     #   "php" => {
     #     "install_method" => "source",
