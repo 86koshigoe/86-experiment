@@ -78,6 +78,7 @@ Vagrant.configure(2) do |config|
 
     # Add a recipe
     chef.add_recipe "yum-remi"
+    chef.add_recipe "system"
     chef.add_recipe "git"
     chef.add_recipe "mysql::server"
     chef.add_recipe "mysql::client"
@@ -93,6 +94,9 @@ Vagrant.configure(2) do |config|
         "php55" => {
           "enabled" => true
         }
+      },
+      "system" => {
+        "timezone" => "Asia/Tokyo"
       },
       "php-fpm" => {
         "skip_repository_install" => true,
