@@ -16,3 +16,17 @@ Vagrant と Berkshelf と Chef Zero を使った開発環境構築の試み。
   - listen = /var/run/php-fpm-www.sock;
 - TODO: Nginx の詳細設定
 - TODO: MySQL の詳細設定
+
+
+## Nginx ##
+
+手作業で `/etc/nginx/default.d/php-fpm.conf` を作って phpinfo が見られる事だけ確認。
+```
+location ~ \.php$ {
+    root           /var/www/html;
+    fastcgi_pass   unix:/var/run/php-fpm-www.sock;
+    fastcgi_index  index.php;
+    fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+    include        fastcgi_params;
+}
+```
