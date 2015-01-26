@@ -111,12 +111,7 @@ Vagrant.configure(2) do |config|
       "mysql" => {
         "server_root_password" => "",
         "enable_utf8" => "true",
-        # "confd_dir" => "/etc/mysql/conf.d",
       },
-      # "mysql_charset" => {
-      #   "encoding" => "utf8",
-      #   "collation" => "utf8_unicode_ci",
-      # },
     }
   end
 end
