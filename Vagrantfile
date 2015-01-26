@@ -72,7 +72,7 @@ Vagrant.configure(2) do |config|
   # config.omnibus.chef_version = :latest
   config.vm.provision "chef_zero" do |chef|
     # Specify the local paths where Chef data is stored
-    chef.cookbooks_path = "./cookbooks"
+    chef.cookbooks_path = ["cookbooks", "./site-cookbooks"]
     # chef.roles_path = "roles"
     # chef.nodes_path = "nodes"
 
@@ -85,6 +85,7 @@ Vagrant.configure(2) do |config|
     chef.add_recipe "php"
     chef.add_recipe "php-fpm"
     chef.add_recipe "nginx"
+    chef.add_recipe "application"
 
     # # Or maybe a role
     # chef.add_role "web"

@@ -1,0 +1,177 @@
+{
+  "name": "yum-remi",
+  "description": "Installs/Configures remi",
+  "long_description": "yum-remi Cookbook\n=============\n\nThis cookbook installs and enables remi repositories.\n\nRequirements\n------------\n\n * Chef 11 or higher\n\nSupports\n--------\n\n * CentOS 6.x\n\nAttributes\n----------\n\n```ruby\ndefault['remi']['main']['enabled']             = 1\ndefault['remi']['main']['priority']            = 10\ndefault['remi']['php55']['enabled']            = 0\ndefault['remi']['php55']['priority']           = 10\ndefault['remi']['test']['enabled']             = 0\ndefault['remi']['test']['priority']            = 10\ndefault['remi']['debuginfo']['enabled']        = 0\ndefault['remi']['debuginfo']['priority']       = 10\ndefault['remi']['php55_debuginfo']['enabled']  = 0\ndefault['remi']['php55_debuginfo']['priority'] = 10\ndefault['remi']['test_debuginfo']['enabled']   = 0\ndefault['remi']['test_debuginfo']['priority']  = 10\n```\n\nUsage\n-----\n\nJust include `yum-remi` in your node's `run_list`:\n\n```json\n{\n  \"name\":\"my_node\",\n  \"run_list\": [\n    \"recipe[yum-remi]\"\n  ]\n}\n```\n\nLicense and Authors\n-------------------\n\n * The MIT License\n * Author Yoshihiro Sasaki <aloelight at gmail.com>\n",
+  "maintainer": "Yoshihiro Sasaki",
+  "maintainer_email": "aloelight@gmail.com",
+  "license": "MIT",
+  "platforms": {
+    "centos": ">= 0.0.0"
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+    "remi/main/enabled": {
+      "default": "1",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "remi/main/priority": {
+      "default": "10",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "remi/php55/enabled": {
+      "default": "0",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "remi/php55/priority": {
+      "default": "10",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "remi/test/enabled": {
+      "default": "0",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "remi/test/priority": {
+      "default": "10",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "remi/debuginfo/enabled": {
+      "default": "0",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "remi/debuginfo/priority": {
+      "default": "10",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "remi/php55_debuginfo/enabled": {
+      "default": "0",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "remi/php55_debuginfo/priority": {
+      "default": "10",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "remi/test_debuginfo/enabled": {
+      "default": "0",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "remi/test_debuginfo/priority": {
+      "default": "10",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    }
+  },
+  "groupings": {
+  },
+  "recipes": {
+    "yum-remi": "Main remi configuration"
+  },
+  "version": "0.1.0",
+  "source_url": "",
+  "issues_url": ""
+}

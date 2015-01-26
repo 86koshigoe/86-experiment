@@ -19,7 +19,7 @@ Vagrant と Berkshelf と Chef Zero を使った開発環境構築の試み。
   - TODO: InnoDB パラメータチューニング
 - TODO: Nginx の詳細設定
   - アプリ用レシピを作って、そこに Nginx の設定ファイルも置くのがよいのだろうか
-
+  - /etc/nginx/conf.d/*.conf
 
 ## Nginx ##
 
