@@ -4,6 +4,7 @@ DEPENDENCIES
   nginx
   php
   php-fpm
+  selinux
   system
   yum-remi
     git: git://github.com/ysasaki/yum-remi.git
@@ -53,6 +54,7 @@ GRAPH
     build-essential (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
+  selinux (0.8.0)
   system (0.3.3)
     apt (>= 0.0.0)
     cron (>= 0.0.0)

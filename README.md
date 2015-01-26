@@ -19,8 +19,7 @@ Vagrant と Berkshelf と Chef Zero を使った開発環境構築の試み。
   - TODO: InnoDB パラメータチューニング
 - Nginx の詳細設定
   - /etc/nginx/default.d/*.conf
-  - TODO: アプリ用の自前クックブックで Nginx の設定を準備する
-    - root が location の中で変えられず…
+  - SELinux を無効にしないと root を /var/www/ 以下にしても参照できない模様
 
 ## Nginx ##
 
