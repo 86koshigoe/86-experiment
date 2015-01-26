@@ -17,9 +17,10 @@ Vagrant と Berkshelf と Chef Zero を使った開発環境構築の試み。
 - MySQL の詳細設定
   - mysql コミュニティクックブックを使っていて node[mysql][enable_utf8] に文字列を入れて真にすると utf8 が設定ファイルに追加される
   - TODO: InnoDB パラメータチューニング
-- TODO: Nginx の詳細設定
-  - アプリ用レシピを作って、そこに Nginx の設定ファイルも置くのがよいのだろうか
-  - /etc/nginx/conf.d/*.conf
+- Nginx の詳細設定
+  - /etc/nginx/default.d/*.conf
+  - TODO: アプリ用の自前クックブックで Nginx の設定を準備する
+    - root が location の中で変えられず…
 
 ## Nginx ##
 

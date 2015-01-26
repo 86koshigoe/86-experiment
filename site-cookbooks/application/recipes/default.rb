@@ -7,6 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
-file "/tmp/something" do
-  action :create_if_missing
+template "/etc/nginx/default.d/php-fpm.conf" do
+  source "nginx.conf.erb"
+  mode 00644
+  owner "root"
+  group  node['root_group']
+  notifies :reload, "service[nginx]"
 end
