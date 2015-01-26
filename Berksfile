@@ -7,6 +7,6 @@ cookbook 'yum-remi', git: 'git://github.com/ysasaki/yum-remi.git'
 cookbook 'system'
 cookbook "git"
 cookbook "nginx"
-cookbook "mysql", "~>5.4.3"
+cookbook "mysql", "~>5.6.1"
 cookbook "php"
 cookbook "php-fpm"

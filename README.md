@@ -14,8 +14,11 @@ Vagrant と Berkshelf と Chef Zero を使った開発環境構築の試み。
   - コミュニティブックのレシピを使うとパッケージインストールになり、ソースで入れたPHPのAPIバージョンと一致せずNOTICEが出てしまう
   - remi-php55 対応の yum-remi クックブックを使うと PHP 5.5 の php/php-fpm がインストールされる
   - listen = /var/run/php-fpm-www.sock;
+- MySQL の詳細設定
+  - mysql コミュニティクックブックを使っていて node[mysql][enable_utf8] に文字列を入れて真にすると utf8 が設定ファイルに追加される
+  - TODO: InnoDB パラメータチューニング
 - TODO: Nginx の詳細設定
-- TODO: MySQL の詳細設定
+  - アプリ用レシピを作って、そこに Nginx の設定ファイルも置くのがよいのだろうか
 
 
 ## Nginx ##

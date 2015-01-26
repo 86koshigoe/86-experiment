@@ -38,7 +38,7 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder "./", "/var/www/86-experimental", create: true
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -72,7 +72,7 @@ Vagrant.configure(2) do |config|
   # config.omnibus.chef_version = :latest
   config.vm.provision "chef_zero" do |chef|
     # Specify the local paths where Chef data is stored
-    chef.cookbooks_path = "cookbooks"
+    chef.cookbooks_path = "./cookbooks"
     # chef.roles_path = "roles"
     # chef.nodes_path = "nodes"
 
@@ -103,11 +103,20 @@ Vagrant.configure(2) do |config|
         "user" => "nginx",
         "group" => "nginx",
       },
-    #   "php" => {
-    #     "install_method" => "source",
-    #     "version" => "5.5.20",
-    #     "checksum" => "7454e4f2dba3b08b2c88bb178e7bf704ed100f3d7ab6b83ea5046a6e4acb7295",
-    #   }
+      # "php" => {
+      #   "install_method" => "source",
+      #   "version" => "5.5.20",
+      #   "checksum" => "7454e4f2dba3b08b2c88bb178e7bf704ed100f3d7ab6b83ea5046a6e4acb7295",
+      # },
+      "mysql" => {
+        "server_root_password" => "",
+        "enable_utf8" => "true",
+        # "confd_dir" => "/etc/mysql/conf.d",
+      },
+      # "mysql_charset" => {
+      #   "encoding" => "utf8",
+      #   "collation" => "utf8_unicode_ci",
+      # },
     }
   end
 end
