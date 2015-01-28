@@ -20,6 +20,9 @@ Vagrant と Berkshelf と Chef Zero を使った開発環境構築の試み。
 - Nginx の詳細設定
   - /etc/nginx/default.d/*.conf
   - SELinux を無効にしないと root を /var/www/ 以下にしても参照できない模様
+- DNS
+  - Nginx の設定で default を避けるために、適当に名前(ドメイン)を付ける
+  - resolver, dnsmasq で適当にローカルDNSをでっちあげる
 
 ## Nginx ##
 

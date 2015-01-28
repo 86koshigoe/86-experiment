@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-template "/etc/nginx/default.d/php-fpm.conf" do
+template "/etc/nginx/conf.d/php-fpm.conf" do
   source "nginx.conf.erb"
   mode 00644
   owner "root"
