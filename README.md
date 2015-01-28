@@ -23,6 +23,12 @@ Vagrant と Berkshelf と Chef Zero を使った開発環境構築の試み。
 - DNS
   - Nginx の設定で default を避けるために、適当に名前(ドメイン)を付ける
   - resolver, dnsmasq で適当にローカルDNSをでっちあげる
+- Laravel
+  - php-mcrypt, php-pdo を追加インストール(PHPコミュニティブックの node[php][packages] で指定)
+  - app/storage/ のパーミッションで Error in exception handler.
+    - app/storage/ 以下を 777/666 にしてごまかした(synced_folder の設定)
+  - TODO: マイグレーションなどのセットアップ、デプロイ時処理など
+    - $ php artisan migrate
 
 ## Nginx ##
 

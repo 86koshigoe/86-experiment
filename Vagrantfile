@@ -38,7 +38,10 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "./", "/var/www/86-experiment", create: true
+  config.vm.synced_folder "./", "/var/www/86-experiment", create: true,
+                          # owner: "vagrant",
+                          # group: "www-data",
+                          mount_options: ["dmode=777,fmode=666"]
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -105,11 +108,12 @@ Vagrant.configure(2) do |config|
         "user" => "nginx",
         "group" => "nginx",
       },
-      # "php" => {
+      "php" => {
+        "packages" => %w(php php-devel php-cli php-pear php-mcrypt php-pdo php-mysql),
       #   "install_method" => "source",
       #   "version" => "5.5.20",
       #   "checksum" => "7454e4f2dba3b08b2c88bb178e7bf704ed100f3d7ab6b83ea5046a6e4acb7295",
-      # },
+      },
       "mysql" => {
         "server_root_password" => "",
         "enable_utf8" => "true",
